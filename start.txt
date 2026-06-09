@@ -1,0 +1,25 @@
+python -m pip install pipenv (активанция виртуального окружения Pipenv)
+python -m pipenv install django==4.0.8 (устнановка фреймворка)
+python -m pipenv shell (погружаемся внутрь виртуального окружения Pipenv.)
+exit (выход из виртуального окружения )
+
+
+python -m django --version (тест)
+pip list (проверка пакетов)
+pip graph (зависимости пакетов)
+
+
+
+
+django-admin startproject base .  (создаем проект джанго)
+
+
+
+
+
+(смена версии питона)
+
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install Django==4.0.8
+django-admin startproject base .
