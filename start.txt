@@ -1,6 +1,8 @@
 python -m pip install pipenv (активанция виртуального окружения Pipenv)
 python -m pipenv install django==4.0.8 (устнановка фреймворка)
 python -m pipenv shell (погружаемся внутрь виртуального окружения Pipenv.)
+python -m pipenv --venv (получить полный путь к виртуальной среде)
+C:\Users\Sergey\Documents\test\Courses-Shop-Django-\.venv\Scripts\python.exe
 exit (выход из виртуального окружения )
 
 
@@ -23,3 +25,7 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install Django==4.0.8
 django-admin startproject base .
+
+
+python -m manage runserver   (запуск)
+py -m manage startapp shop (добавляем новое приложение)
