@@ -1,25 +1,25 @@
-python -m pip install pipenv (активанция виртуального окружения Pipenv)
-python -m pipenv install django==4.0.8 (устнановка фреймворка)
-python -m pipenv shell (погружаемся внутрь виртуального окружения Pipenv.)
-python -m pipenv --venv (получить полный путь к виртуальной среде)
+﻿python -m pip install pipenv (установка Pipenv)
+python -m pipenv install django==4.0.8 (установка фреймворка Django)
+python -m pipenv shell (входим в виртуальное окружение Pipenv)
+python -m pipenv --venv (получить полный путь к виртуальному окружению)
 C:\Users\Sergey\Documents\test\Courses-Shop-Django-\.venv\Scripts\python.exe
-exit (выход из виртуального окружения )
+exit (выход из виртуального окружения)
 
 
-python -m django --version (тест)
+python -m django --version (тест версии Django)
 pip list (проверка пакетов)
 pip graph (зависимости пакетов)
 
 
 
 
-django-admin startproject base .  (создаем проект джанго)
+django-admin startproject base .  (создаем проект Django)
 
 
 
 
 
-(смена версии питона)
+(смена версии Python)
 
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -27,5 +27,63 @@ python -m pip install Django==4.0.8
 django-admin startproject base .
 
 
-python -m manage runserver   (запуск)
+python -m manage runserver   (запуск сервера)
 py -m manage startapp shop (добавляем новое приложение)
+py -m manage createsuperuser (добавляем суперпользователя)
+py -m manage makemigrations  (создаем миграции после изменения моделей)
+py -m manage migrate (применяем миграции к базе данных)
+
+
+===============================
+ДОБАВЛЯЕМ ЗАПИСИ В БАЗУ КАТЕГОРИЮ
+===============================
+
+1. Входим в Django shell:
+
+py -m manage shell
+
+2. Импортируем модели:
+
+from shop.models import Category, Course
+
+3. Смотрим все записи:
+
+Course.objects.all()      (получаем все курсы)
+Category.objects.all()    (получаем все категории)
+
+4. Создаем новую категорию:
+
+new_category = Category(title="Programming")
+new_category.save()
+
+5. Проверяем созданную запись:
+
+new_category.id           (получаем id созданной категории)
+new_category.created_at   (получаем дату создания)
+
+6. Ищем запись по primary key:
+
+Category.objects.get(pk=1)
+Category.objects.get(pk=1).title
+
+7. Фильтруем записи по названию:
+
+Category.objects.filter(title="Programming")
+Category.objects.filter(title="Programming")[0].title
+
+8. Подготавливаем категорию для создания курса:
+
+category = Category.objects.get(id=1)
+category.course_set.all()    (получаем все курсы этой категории)
+
+9. Создаем новый курс в этой категории:
+
+category.course_set.create(title="Complete Python Guide", price=9.99, students_qty=100, reviews_qty=50)
+
+10. Проверяем созданный курс:
+
+Course.objects.get(pk=1)    (получаем курс по primary key)
+
+11. Получаем список названий всех курсов:
+
+[course.title for course in Course.objects.all()]
