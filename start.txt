@@ -35,7 +35,7 @@ py -m manage migrate (применяем миграции к базе данны
 
 
 ===============================
-ДОБАВЛЯЕМ ЗАПИСИ В БАЗУ КАТЕГОРИЮ
+ДОБАВЛЯЕМ ЗАПИСИ В БАЗУ
 ===============================
 
 1. Входим в Django shell:
@@ -71,19 +71,21 @@ Category.objects.get(pk=1).title
 Category.objects.filter(title="Programming")
 Category.objects.filter(title="Programming")[0].title
 
-8. Подготавливаем категорию для создания курса:
 
+8. Подготавливаем категорию для создания курса:
 category = Category.objects.get(id=1)
 category.course_set.all()    (получаем все курсы этой категории)
 
-9. Создаем новый курс в этой категории:
 
+9. Создаем новый курс в этой категории:
 category.course_set.create(title="Complete Python Guide", price=9.99, students_qty=100, reviews_qty=50)
 
-10. Проверяем созданный курс:
 
+10. Проверяем созданный курс:
 Course.objects.get(pk=1)    (получаем курс по primary key)
 
-11. Получаем список названий всех курсов:
 
+11. Получаем список названий всех курсов:
 [course.title for course in Course.objects.all()]
+
+

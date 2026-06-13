@@ -1,0 +1,211 @@
+/* ===== Courses Table Styles ===== */
+
+body {
+  background: #f5f6f8;
+  color: #1d1d1f;
+  min-height: 100vh;
+}
+
+/* ===== Page Section ===== */
+
+.page-section {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ===== Page Header ===== */
+
+.page-header {
+  margin-bottom: 1.5rem;
+}
+
+.page-header__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.page-header__description {
+  font-size: 0.9rem;
+  color: #6e6e73;
+  line-height: 1.5;
+}
+
+/* ===== Table Wrapper ===== */
+
+.table-wrapper {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 100%;
+
+  /* Enable horizontal scroll on small screens */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===== Table Base ===== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 600px;
+}
+
+/* ===== Header ===== */
+
+thead th {
+  background: #1d1d1f;
+  color: #ffffff;
+  padding: 0.9rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: none;
+  border-right: 1px solid #3a3a3c;
+  white-space: nowrap;
+}
+
+thead th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+thead th:last-child {
+  text-align: center;
+  border-right: none;
+  border-radius: 0 8px 0 0;
+}
+
+/* ===== Body Rows ===== */
+
+tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f6f7;
+}
+
+tbody tr:hover {
+  background-color: #eeeeee;
+}
+
+tbody td {
+  padding: 0.85rem 1rem;
+  color: #1d1d1f;
+  vertical-align: middle;
+  white-space: nowrap;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody td:last-child {
+  text-align: center;
+}
+
+/* ===== Special Columns ===== */
+
+/* Category */
+td:nth-child(2) {
+  color: #6e6e73;
+  font-size: 0.85rem;
+}
+
+/* Price */
+td:nth-child(3) {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Students count */
+td:nth-child(4) {
+  color: #6e6e73;
+  font-size: 0.85rem;
+}
+
+/* ===== Buy Button ===== */
+
+button {
+  background: #1d1d1f;
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  background: #3a3a3c;
+}
+
+button:active {
+  background: #1d1d1f;
+}
+
+/* ==============================================
+   Responsive — Tablet (768px and below)
+   ============================================== */
+
+@media (max-width: 768px) {
+  .page-header__title {
+    font-size: 1.25rem;
+  }
+
+  thead th {
+    padding: 0.7rem 0.75rem;
+    font-size: 0.72rem;
+  }
+
+  tbody td {
+    padding: 0.7rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  button {
+    padding: 0.35rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* ==============================================
+   Responsive — Mobile (480px and below)
+   ============================================== */
+
+@media (max-width: 480px) {
+  table {
+    font-size: 0.78rem;
+    min-width: 460px;
+  }
+
+  thead th {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.68rem;
+  }
+
+  tbody td {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+  }
+}
