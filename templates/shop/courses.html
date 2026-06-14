@@ -19,7 +19,11 @@
       <!-- prettier-ignore -->
       {% for course in courses %}
       <tr>
-        <td>{{course.title}}</td>
+        
+        {% comment %} <td><a href="{{course.id}}">{{course.title}}</a></td> {% endcomment %}
+        {% comment %} <td><a href={% url "single_course" course.id %}>{{course.title}}</a></td> {% endcomment %}
+       {% comment %} app_name + urlpatterns name + arg {% endcomment %}
+        <td><a href={% url "shop:single_course" course.id %}>{{course.title}}</a></td>
         <td>{{course.category}}</td>
         <td>${{course.price}}</td>
         <td>{{course.students_qty}}</td>

@@ -1,0 +1,64 @@
+/* ===== Base Layout ===== */
+
+body {
+  background: #f5f6f8;
+  color: #1d1d1f;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main.container {
+  flex: 1;
+}
+
+/* ===== Footer ===== */
+
+.site-footer {
+  background: #1d1d1f;
+  color: #ffffff;
+  margin-top: 2rem;
+  padding: 1.25rem 0;
+}
+
+.site-footer__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-footer__text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #a1a1a6;
+  text-align: center;
+}
+
+/* ==============================================
+   Responsive — Tablet (768px and below)
+   ============================================== */
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 1rem 0;
+  }
+
+  .site-footer__text {
+    font-size: 0.8rem;
+  }
+}
+
+/* ==============================================
+   Responsive — Mobile (480px and below)
+   ============================================== */
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 0.75rem 0;
+  }
+
+  .site-footer__text {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,53 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+<!-- prettier-ignore -->
+{% load static %}
+<!-- prettier-ignore -->
+{% block title %}{{ course.title }}{% endblock title %}
+<!-- prettier-ignore -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'shop/css/single-course.css' %}" />
+{% endblock extra_css %}
+<!-- prettier-ignore -->
+{% block content %}
+<div class="course-card">
+  <div class="course-card__inner">
+    <h1 class="course-card__title">{{ course.title }}</h1>
+
+    <dl class="course-details">
+      <div class="course-details__item">
+        <dt class="course-details__term">Category</dt>
+        <dd class="course-details__desc">{{ course.category }}</dd>
+      </div>
+      <div class="course-details__item">
+        <dt class="course-details__term">Price</dt>
+        <dd class="course-details__desc course-details__desc--price">
+          ${{ course.price }}
+        </dd>
+      </div>
+      <div class="course-details__item">
+        <dt class="course-details__term">Students</dt>
+        <dd class="course-details__desc">{{ course.students_qty }}</dd>
+      </div>
+      <div class="course-details__item">
+        <dt class="course-details__term">Reviews</dt>
+        <dd class="course-details__desc">{{ course.reviews_qty }}</dd>
+      </div>
+      <div class="course-details__item">
+        <dt class="course-details__term">Created</dt>
+        <dd class="course-details__desc">
+          {{ course.created_at|date:"M d, Y" }}
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+  <div class="course-card__actions">
+    <a href="{% url 'shop:index' %}" class="course-card__back">
+      <span class="course-card__back-arrow">&larr;</span>
+      Back to courses
+    </a>
+  </div>
+</div>
+<!-- prettier-ignore -->
+{% endblock %}

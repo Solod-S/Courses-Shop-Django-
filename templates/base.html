@@ -16,12 +16,14 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="{% static 'shared/css/base.css' %}" />
     <link rel="stylesheet" href="{% static 'shop/css/courses.css' %}" />
+    {% block extra_css %} {% endblock extra_css %}
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark mb-4">
       <div class="container">
-        <a href="/" class="navbar-brand">Main</a>
+        <a href={% url "shop:index" %} class="navbar-brand">Main</a>
       </div>
     </nav>
     <main class="container">
@@ -29,5 +31,6 @@
       {% block content %}
       {% endblock %}
     </main>
+    {% include "footer.html" %}
   </body>
 </html>

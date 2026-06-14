@@ -1,11 +1,5 @@
 /* ===== Courses Table Styles ===== */
 
-body {
-  background: #f5f6f8;
-  color: #1d1d1f;
-  min-height: 100vh;
-}
-
 /* ===== Page Section ===== */
 
 .page-section {
@@ -114,6 +108,24 @@ tbody tr:last-child td {
 
 tbody td:last-child {
   text-align: center;
+}
+
+/* ===== Title Link ===== */
+
+td:first-child a,
+td:first-child a:link,
+td:first-child a:visited {
+  color: #1d1d1f !important;
+  text-decoration: underline !important;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+td:first-child a:hover,
+td:first-child a:active,
+td:first-child a:focus {
+  color: #3a3a3c !important;
+  text-decoration: underline !important;
 }
 
 /* ===== Special Columns ===== */

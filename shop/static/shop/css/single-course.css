@@ -1,0 +1,162 @@
+/* ===== Single Course Page Styles ===== */
+
+/* ===== Course Card ===== */
+
+.course-card {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.course-card__inner {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.course-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* ===== Course Details List ===== */
+
+.course-details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-details__item {
+  display: flex;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.course-details__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.course-details__term {
+  flex: 0 0 140px;
+  font-weight: 600;
+  color: #1d1d1f;
+  letter-spacing: 0.01em;
+}
+
+.course-details__desc {
+  flex: 1;
+  color: #6e6e73;
+}
+
+.course-details__desc--price {
+  font-weight: 600;
+  color: #1d1d1f;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===== Back Link ===== */
+
+.course-card__actions {
+  margin-top: 1.5rem;
+}
+
+.course-card__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #1d1d1f;
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.course-card__back:hover {
+  background: #3a3a3c;
+  color: #ffffff;
+}
+
+.course-card__back:active {
+  background: #1d1d1f;
+}
+
+.course-card__back-arrow {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+/* ==============================================
+   Responsive — Tablet (768px and below)
+   ============================================== */
+
+@media (max-width: 768px) {
+  .course-card__inner {
+    padding: 1.5rem;
+  }
+
+  .course-card__title {
+    font-size: 1.25rem;
+  }
+
+  .course-details__term {
+    flex-basis: 110px;
+    font-size: 0.85rem;
+  }
+
+  .course-details__desc {
+    font-size: 0.85rem;
+  }
+
+  .course-card__back {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ==============================================
+   Responsive — Mobile (480px and below)
+   ============================================== */
+
+@media (max-width: 480px) {
+  .course-card__inner {
+    padding: 1rem;
+  }
+
+  .course-card__title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .course-details__item {
+    flex-direction: column;
+    padding: 0.6rem 0;
+    gap: 0.15rem;
+  }
+
+  .course-details__term {
+    flex-basis: auto;
+    font-size: 0.78rem;
+  }
+
+  .course-details__desc {
+    font-size: 0.82rem;
+  }
+
+  .course-card__back {
+    padding: 0.45rem 1rem;
+    font-size: 0.75rem;
+  }
+}
