@@ -5,6 +5,7 @@
 ```bash
 # Установка Pipenv
 python -m pip install pipenv
+python -m pip install django-tastypie
 
 # Установка Django 4.0.8
 python -m pipenv install django==4.0.8
