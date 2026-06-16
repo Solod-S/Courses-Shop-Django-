@@ -25,6 +25,7 @@ class CourseResource(ModelResource):
         queryset = Course.objects.all()
         resource_name = "courses"
         allowed_methods = ["get", "post", "delete"]
+        excludes = ["created_at"]
         authentication = CustomAuthentication()
         authorization = Authorization()
 
@@ -36,9 +37,10 @@ class CourseResource(ModelResource):
         bundle.obj.category_id = bundle.data["category_id"]
         return bundle
 
-# добавляем category_id в тело ответа
+# добавляем category_id и category  в тело ответа
     def dehydrate(self, bundle):
         bundle.data["category_id"] = bundle.obj.category_id
+        bundle.data["category"] = bundle.obj.category
         return bundle
 
 # добавляем все заголовки большими в тело ответа

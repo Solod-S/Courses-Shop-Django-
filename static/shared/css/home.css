@@ -1,0 +1,147 @@
+/* ===== Hero Section ===== */
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  background: linear-gradient(135deg, #1d1d1f 0%, #2c2c2e 100%);
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(0, 122, 255, 0.15) 0%,
+    transparent 60%
+  );
+}
+
+.hero__content {
+  z-index: 1;
+  max-width: 720px;
+  padding: 2rem;
+}
+
+.hero__title {
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  opacity: 0.85;
+}
+
+/* ===== Feature Cards ===== */
+
+.feature-card {
+  border-radius: 16px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card__icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* ===== Category Cards ===== */
+
+.category-card {
+  border-radius: 12px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.category-card__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* ===== CTA Section ===== */
+
+.cta {
+  background: linear-gradient(135deg, #1d1d1f 0%, #2c2c2e 100%);
+}
+
+/* ===== Testimonial Cards ===== */
+
+.testimonial-card {
+  border-radius: 16px;
+  background: #ffffff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-card__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #3a3a3c;
+}
+
+.testimonial-card__avatar {
+  width: 44px;
+  height: 44px;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ==============================================
+   Responsive — Tablet (768px and below)
+   ============================================== */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 55vh;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* ==============================================
+   Responsive — Mobile (480px and below)
+   ============================================== */
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 45vh;
+  }
+
+  .hero__title {
+    font-size: 1.75rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .feature-card,
+  .category-card,
+  .testimonial-card {
+    padding: 1.25rem !important;
+  }
+}

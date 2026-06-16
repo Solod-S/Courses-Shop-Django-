@@ -1,0 +1,193 @@
+{% extends "base.html" %} {% load static %} {% block title %}Courses Shop —
+Learn Something New Today{% endblock title %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'shared/css/home.css' %}" />
+{% endblock extra_css %} {% block content %}
+<!-- Hero Section -->
+<section
+  class="hero text-center text-white d-flex align-items-center justify-content-center"
+>
+  <div class="hero__overlay"></div>
+  <div class="hero__content position-relative">
+    <h1 class="hero__title display-3 fw-bold">Unlock Your Potential</h1>
+    <p class="hero__subtitle lead mb-4">
+      Expert-led courses designed to help you master new skills and advance your
+      career.
+    </p>
+    <a href="{% url 'shop:index' %}" class="btn btn-light btn-lg px-5"
+      >Browse Courses</a
+    >
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-semibold">Why Learn With Us</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card feature-card border-0 h-100 text-center p-4">
+          <div class="feature-card__icon mb-3">
+            <i class="bi bi-book display-5"></i>
+          </div>
+          <h3 class="h5 fw-semibold">Expert Instructors</h3>
+          <p class="text-secondary">
+            Learn from industry professionals with years of real-world
+            experience.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card feature-card border-0 h-100 text-center p-4">
+          <div class="feature-card__icon mb-3">
+            <i class="bi bi-clock display-5"></i>
+          </div>
+          <h3 class="h5 fw-semibold">Learn at Your Pace</h3>
+          <p class="text-secondary">
+            Self-paced courses with lifetime access — study whenever it suits
+            you.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card feature-card border-0 h-100 text-center p-4">
+          <div class="feature-card__icon mb-3">
+            <i class="bi bi-trophy display-5"></i>
+          </div>
+          <h3 class="h5 fw-semibold">Certificates</h3>
+          <p class="text-secondary">
+            Earn a certificate of completion to showcase your achievement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Preview -->
+<section class="categories-preview py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-semibold">Explore Categories</h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card category-card border-0 h-100 text-center p-4">
+          <div class="category-card__icon mb-3">
+            <i class="bi bi-code-slash display-5"></i>
+          </div>
+          <h3 class="h6 fw-semibold">Programming</h3>
+          <p class="small text-secondary">
+            Python, JavaScript, Django, and more
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card category-card border-0 h-100 text-center p-4">
+          <div class="category-card__icon mb-3">
+            <i class="bi bi-palette display-5"></i>
+          </div>
+          <h3 class="h6 fw-semibold">Design</h3>
+          <p class="small text-secondary">UI/UX, Graphic Design, Figma</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card category-card border-0 h-100 text-center p-4">
+          <div class="category-card__icon mb-3">
+            <i class="bi bi-graph-up display-5"></i>
+          </div>
+          <h3 class="h6 fw-semibold">Data Science</h3>
+          <p class="small text-secondary">Machine Learning, Analytics, SQL</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card category-card border-0 h-100 text-center p-4">
+          <div class="category-card__icon mb-3">
+            <i class="bi bi-globe display-5"></i>
+          </div>
+          <h3 class="h6 fw-semibold">Marketing</h3>
+          <p class="small text-secondary">
+            SEO, Social Media, Content Strategy
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta py-5 text-center text-white">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Ready to Start Learning?</h2>
+    <p class="lead mb-4">
+      Join thousands of students already improving their skills.
+    </p>
+    <a href="{% url 'shop:index' %}" class="btn btn-light btn-lg px-5"
+      >Get Started Now</a
+    >
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-semibold">What Our Students Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card testimonial-card border-0 h-100 p-4">
+          <p class="testimonial-card__text mb-3">
+            "This platform completely changed my career path. The courses are
+            well-structured and easy to follow."
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <div
+              class="testimonial-card__avatar rounded-circle bg-primary d-flex align-items-center justify-content-center text-white fw-bold"
+            >
+              JD
+            </div>
+            <div>
+              <p class="mb-0 fw-semibold">Jane Doe</p>
+              <small class="text-secondary">Full-stack Developer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card testimonial-card border-0 h-100 p-4">
+          <p class="testimonial-card__text mb-3">
+            "High-quality content with hands-on projects. I landed my dream job
+            right after completing the course."
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <div
+              class="testimonial-card__avatar rounded-circle bg-success d-flex align-items-center justify-content-center text-white fw-bold"
+            >
+              MS
+            </div>
+            <div>
+              <p class="mb-0 fw-semibold">Mike Smith</p>
+              <small class="text-secondary">Software Engineer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card testimonial-card border-0 h-100 p-4">
+          <p class="testimonial-card__text mb-3">
+            "Affordable and incredibly valuable. The instructors really know
+            their stuff."
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <div
+              class="testimonial-card__avatar rounded-circle bg-warning d-flex align-items-center justify-content-center text-white fw-bold"
+            >
+              AL
+            </div>
+            <div>
+              <p class="mb-0 fw-semibold">Anna Lee</p>
+              <small class="text-secondary">Data Analyst</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

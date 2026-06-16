@@ -13,6 +13,17 @@ main.container {
   flex: 1;
 }
 
+/* ===== Brand ===== */
+
+.navbar-brand--company {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  pointer-events: none; /* не ссылка */
+  text-transform: uppercase;
+}
+
 /* ===== Footer ===== */
 
 .site-footer {
